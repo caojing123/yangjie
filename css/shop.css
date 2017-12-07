@@ -1,0 +1,173 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+ul,
+li,
+ol{
+	list-style: none;
+}
+img{
+	border: 0 none;
+	display: block;
+}
+html{
+	font-size:50px;
+}
+body{
+	font-family: "微软雅黑",Arial;	
+	background: #f4f4f4;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+}
+.header{
+	line-height: 0.67rem;
+	width: 100%;
+	background: #fff9eb;
+	border-bottom: 1px solid #ffd6a0;
+	font-size: 14px;
+	text-align: center;
+}
+.header>span{
+	color: red;
+}
+.content{
+	width: 100%;
+	height: 100%;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+	background: #fff;
+	flex: 1;
+	overflow-y: scroll;
+}
+.con{
+	height: 2.63rem;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 1px;
+}
+.con_top{
+	width: 100%;
+	height: 2.02rem;
+	display: flex;
+	align-items: center;
+}
+.radio{
+	width: 0.36rem;
+	height: 0.36rem;
+	border-radius: 50%;
+	border: 1px solid #ddd;
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+}
+.radio:hover{
+	background: green;
+}
+smallbox{
+	flex: 1;
+	height: 2.02rem;
+	border-bottom: 1px solid #ddd;
+	display: flex;
+}
+.smallbox img{
+	display: block;
+	width: 1.78rem;
+	height: 2rem;
+}
+.smallbox>div{
+	flex: 1;
+	height: 2.02rem;
+}
+.smallbox>div>p{
+	line-height: 0.8rem;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.smallbox>div>p>img{
+	width: 0.49rem;
+	height: 0.43rem;
+	margin-right: 0.2rem;
+}
+.smallbox>div>span{
+	width: 0.8rem;
+	line-height: 0.35rem;
+	text-align: center;
+	border-radius: 0.2rem;
+	display: block;
+	border: 1px solid #11b57c;
+	color: #11b57c;
+	font-size: 14px;
+	margin-top: 0.2rem;
+}
+.smallbox>div>div{
+	height: 0.58rem; 
+	display: flex;
+	font-size: 14px;
+	align-items: center;
+}
+.smallbox>div>div>b{
+	color: red;
+	margin-right: 0.16rem;
+}
+.smallbox>div>div>span{
+	color: #ccc;
+	margin-right: 1.5rem;
+}
+.smallbox>div>div>div{
+	width: 1.57rem;
+	border: 1px solid #ccc;
+	height: 0.41rem;
+	display: flex;
+}
+.smallbox>div>div>div input{
+	border: none;
+	background: #fff;
+}
+.smallbox>div>div>div input[type="button"]{
+	width: 0.4rem;
+}
+.smallbox>div>div>div input[type="text"]{
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	width: 0.7rem;
+	text-align: center;
+}
+.con_bottom{
+	padding-left: 0.75rem;
+	font-size: 14px;
+	line-height: 0.58rem;
+	color: #ccc;
+	overflow: hidden;
+}
+.con_bottom>span{
+	color: #808080;
+	margin-right: 0.1rem;
+}
+.foot{
+	height: 1.26rem;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #fff;
+}
+.foot_bottom{
+	height: 0.96rem;
+	border-top: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.2rem;
+}
+.foot_bottom>a{
+	width: 2.15rem;
+	line-height: 0.96rem;
+	background: #ff6353;
+	font-size: 18px;
+	color: white;
+	text-align: center;
+}

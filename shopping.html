@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="css/shopping.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+	<header class="header">全场满100包邮，还差<span>100.00</span>元包邮</header>
+	<article>
+		<h1></h1>
+		<div class="content">
+			<div class="con_top">
+				<span class="check"></span>
+				<div class="con_right">
+					<img src="images/fruit (1).jpg" alt="">
+					<div class="con_small">
+						<p>江西赣南脐橙20个160个以上/个<img src="images/05.jpg" alt=""></p>
+						<span>直降</span>
+						<div class="last_box">							
+							<span><b class="UnitPrice">￥59</b>￥75.5</span>
+							<p>
+								<i class="reduce">-</i><span class="value">1</span><i class="add">+</i>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="con_bottom">
+				<span>满减</span>&nbsp;&nbsp;已满足[满1件减16.9活动，节省101.4元]
+			</div>
+		</div>
+		<div class="content">
+			<div class="con_top">
+				<span class="check"></span>
+				<div class="con_right">
+					<img src="images/fruit (2).jpg" alt="">
+					<div class="con_small">
+						<p>江西赣南脐橙20个160个以上/个<img src="images/05.jpg" alt=""></p>
+						<span>直降</span>
+						<div class="last_box">							
+							<span><b class="UnitPrice">￥59</b>￥75.5</span>
+							<p>
+								<i class="reduce">-</i><span class="value">1</span><i class="add">+</i>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="con_bottom">
+				<span>满减</span>&nbsp;&nbsp;已满足[满1件减16.9活动，节省101.4元]
+			</div>
+		</div>
+		<div class="content">
+			<div class="con_top">
+				<span class="check"></span>
+				<div class="con_right">
+					<img src="images/fruit (3).jpg" alt="">
+					<div class="con_small">
+						<p>江西赣南脐橙20个160个以上/个<img src="images/05.jpg" alt=""></p>
+						<span>直降</span>
+						<div class="last_box">							
+							<span><b class="UnitPrice">￥59</b>￥75.5</span>
+							<p>
+								<i class="reduce">-</i><span class="value">1</span><i class="add">+</i>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="con_bottom">
+				<span>满减</span>&nbsp;&nbsp;已满足[满1件减16.9活动，节省101.4元]
+			</div>
+		</div>
+		<div class="content">
+			<div class="con_top">
+				<span class="check"></span>
+				<div class="con_right">
+					<img src="images/fruit (4).jpg" alt="">
+					<div class="con_small">
+						<p>江西赣南脐橙20个160个以上/个<img src="images/05.jpg" alt=""></p>
+						<span>直降</span>
+						<div class="last_box">							
+							<span><b class="UnitPrice">￥69</b>￥75.5</span>
+							<p>
+								<i class="reduce">-</i><span class="value">1</span><i class="add">+</i>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h1></h1>
+	</article>
+	<footer>
+		<div class="foot_one">
+			<p><span class="check check_on"></span>全选</p>
+			<div class="price">
+				<p>合计(不含运费):<b class="total">￥236.00</b></p>
+				<span>已优惠：￥0.00</span>
+			</div>
+			<a href="#">去结算<span>(0)</span></a>
+		</div>
+		<div class="foot_two">
+			<a href="#"><img src="images/1.jpg" alt=""><span>首页</span></a>
+			<a href="#"><img src="images/2.jpg" alt=""><span>分类</span></a>
+			<a href="#"><img src="images/3.jpg" alt=""><span>吃饭吧</span></a>
+			<a href="#"><img src="images/4.jpg" alt=""><span>购物车</span></a>
+			<a href="#"><img src="images/5.jpg" alt=""><span>我的易果</span></a>
+		</div>
+	</footer>
+</body>
+</html>
+<!--<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>-->
+<script src="jquery-1.8.3.min.js"></script>
+<script>
+	$(function(){
+		// 全选效果
+		$(".check_on").click(function(){
+			$(".check").toggleClass('active')
+		})
+		$(".check").click(function(){
+			$(this).toggleClass('active')
+		})
+		// 自加自减效果
+		$(".add").click(function(){
+			var num=$(this).parent().find(".value").html()
+			num++
+			$(this).parent().find(".value").html(num)//确认多少个个数
+
+			var UnitPrice=$(this).parent().parent().find(".UnitPrice").html().slice(1)//获取单价的值
+			console.log(UnitPrice);
+			var T=UnitPrice*(num-1)//计算单价*数量	
+			console.log(T+"we");		
+			var Total=Number($(".total").html().slice(1)).toFixed(2)//获取当前总价的值保留两位小数
+			console.log(Total);
+			var H=(Number(Total)+Number(T)).toFixed(2);//
+			console.log(Number(Total));
+			$(".total").html("￥"+H)
+		})
+		$(".reduce").click(function(){
+			var num=$(this).parent().find(".value").html()
+			num--
+			if(num<1){
+				num=1
+			}
+			$(this).parent().find(".value").html(num)//确认多少个个数
+		})
+		// 合计计算结果
+		
+	})
+</script>
